@@ -2,9 +2,11 @@ package com.amino.delivery.delivery_service.notifi;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import org.springframework.web.bind.annotation.RestController;
 
 @Entity
+@Table(name = "tbl_notifications")
 public class Notification {
     @Id
     private String id;

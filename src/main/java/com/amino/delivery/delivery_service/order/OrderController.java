@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DeliveryController {
+public class OrderController {
 
-    private final DeliveryService deliveryService;
+    private final OrderService orderService;
 
-    public DeliveryController(DeliveryService deliveryService) {
-        this.deliveryService = deliveryService;
+    public OrderController(OrderService orderService) {
+        this.orderService = orderService;
     }
 
     // Request new delivery
@@ -22,7 +22,7 @@ public class DeliveryController {
 
     // Track delivery
     @GetMapping("/delivery/{deliveryId}/track")
-    public ResponseEntity<Delivery> trackDelivery(String deliveryId) {
+    public ResponseEntity<Order> trackDelivery(String deliveryId) {
         return null;
     }
 

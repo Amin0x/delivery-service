@@ -2,9 +2,21 @@ package com.amino.delivery.delivery_service.users;
 
 import org.springframework.stereotype.Service;
 
-public interface UserService {
-    User registerUser(User user);
-    User loginUser();
-    User logoutUser();
-    UserProfile getUserProfile();
+@Service
+public class UserService{
+    public User registerUser(User user) {
+        return null;
+    }
+
+    public User loginUser() {
+        return null;
+    }
+
+    public User logoutUser() {
+        return null;
+    }
+
+    public UserProfile getUserProfile() {
+        return null;
+    }
 }

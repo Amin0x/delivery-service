@@ -1,10 +1,17 @@
 package com.amino.delivery.delivery_service.notifi;
 
-import org.springframework.stereotype.Service;
-
+import java.time.LocalDateTime;
 import java.util.List;
 
-@Service
-public interface NotificationService {
-    List<Notification> getNotifications(String userId);
+public class NotificationService {
+
+    public List<Notification> getNotifications(String userId) {
+        return List.of();
+    }
+
+    public void deleteAllNotification(){
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime dateTime = now.minusDays(7).toLocalDate().atStartOfDay();
+
+    }
 }
