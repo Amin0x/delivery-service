@@ -133,7 +133,7 @@ public class OrderService {
         }
 
         Product product = productRepository.findById(productId).orElse(null);
-        if (product == null){
+        if (product == null) {
             throw new RuntimeException("");
         }
 
@@ -154,7 +154,11 @@ public class OrderService {
     }
 
     public void makePayment(){
-
+        Payment payment = new Payment();
+        Order order;
+        payment.setOrder(order);
+        order.getPayments().add(payment);
+        orderRepository.save(order);
     }
 
     private OrderDto toDto(Order order){

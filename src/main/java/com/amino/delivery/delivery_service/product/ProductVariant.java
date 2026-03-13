@@ -2,8 +2,10 @@ package com.amino.delivery.delivery_service.product;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "tbl_product_variants")
 public class ProductVariant {
     @Id
     private String id;

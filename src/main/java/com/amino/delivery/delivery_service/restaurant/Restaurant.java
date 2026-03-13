@@ -2,8 +2,10 @@ package com.amino.delivery.delivery_service.restaurant;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "tbl_restaurants")
 public class Restaurant {
     @Id
     private String id;
@@ -12,6 +14,7 @@ public class Restaurant {
     private String location;
     private String status;
     private String restaurantType;
+    private String restaurantId;
     private String createdAt;
     private String updatedAt;
 
@@ -77,5 +80,13 @@ public class Restaurant {
 
     public void setRestaurantType(String restaurantType) {
         this.restaurantType = restaurantType;
+    }
+
+    public String getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(String restaurantId) {
+        this.restaurantId = restaurantId;
     }
 }

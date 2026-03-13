@@ -30,6 +30,18 @@ public class User {
     @Column(nullable = false, length = 50)
     private String updatedAt;
 
+    @OneToOne
+    @JoinColumn(name = "user_location_id")
+    private UserLocation userLocation;
+
+    public UserLocation getUserLocation() {
+        return userLocation;
+    }
+
+    public void setUserLocation(UserLocation userLocation) {
+        this.userLocation = userLocation;
+    }
+
     public String getId() {
         return id;
     }

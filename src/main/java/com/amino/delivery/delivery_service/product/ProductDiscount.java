@@ -1,12 +1,15 @@
 package com.amino.delivery.delivery_service.product;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
 @Entity
 public class ProductDiscount {
-    private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
+    private Long id;
     private String productId;
     private String restaurantId;
     private String restaurantBranchId;
@@ -18,11 +21,11 @@ public class ProductDiscount {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
